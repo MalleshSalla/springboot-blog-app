@@ -32,7 +32,9 @@ public class Comment
 	
 	/*ManyToOne : Multiple records of one table(comment table) are associated with one record of another table(posts table). Multiple comments have one post
 	 *FetchType.LAZY tells the hibernate to fetch only related entites from the database when you use the relationship
-	 *@JoinColumn is a JPA (Java Persistence API) annotation used to specify the column that is used to join two entities in a one-to-many or many-to-many relationship. It is typically used in the "one" side of the relationship, and it corresponds to a foreign key column in the database table that corresponds to the "many" side of the relationship.
+	 *@JoinColumn is a JPA (Java Persistence API) annotation used to specify the column that is used to join
+	 * two entities in a one-to-many or many-to-many relationship. It is typically used in the "one" side of the relationship, 
+	 * and it corresponds to a foreign key column in the database table that corresponds to the "many" side of the relationship.
 	 */
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name="post_id",nullable = false)
